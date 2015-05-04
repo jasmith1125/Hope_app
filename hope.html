@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Author: Joyce Smith, CSCI E-3
+    Final Project-Web form for homeless program donations/volunteer recruitment
+    5-13-15 -->
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Hope Community Rapid Re-Housing Program needs your help! />
+  <meta name="keywords" content="Gramd Rapids Housing Commission mission, history of public housing in Grand Rapids" />
+  <title>Hope Community Rapid Re&#8209;Housing Program</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/foundation.min.css" />
+  <link rel="stylesheet" href="css/app.css" />
+
+  <link href='http://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic' rel='stylesheet' type='text/css'>
+</head>
+<body id="container">
+ 
+
+<div class="row">
+   <div id="hopeBanner" class="large-12 columns">
+    	<img class ="img-responsive" src="img/mother_child.jpg" alt="Seated mother holding baby"/>
+    </div>
+  </div> 
+
+<div class="row">
+<h1>Hope Community Rapid Re&#8209;Housing Program</h1>
+</div>
+  
+   
+  <div class="row">
+  <div id="introLeft" class="large-6 columns">
+  <p>Located in Grand&nbsp;Rapids, Michigan, Hope&nbsp;Community is dedicated to meeting the transitional housing needs of low-income women and their minor dependent children. Applicants are referred by The Salvation Army.</p>
+	<p>Our facilities include a Service Center that features twelve private apartments as well as twelve duplex units. As residents gain the skills they need to progress toward independent living, they receive a Section&nbsp;8 Housing Choice Voucher that empowers them to find private rental housing in our community.</p>
+  </div>
+
+
+  <div id="introRight" class="large-6 columns">
+    <p>Hope Community housing facilities were built by members of the Home &amp; Building Association of Greater Grand&nbsp;Rapids, who donated both labor and materials. The program is administered by Grand&nbsp;Rapids Housing Commission and is supported by a HUD Rapid Re-Housing Program grant.</p> 
+  <p>Because grant funding does not cover many basic necessities, the need for goods and services is ongoing; we continue to rely on the generosity of community donors to obtain many essential supplies and services.</p>
+      </div>
+  </div><!--end row-->
+
+  <div class="row">
+    
+    <div id="donorIntro" class="large-9 large-centered columns">
+      <hr>
+      <h2>Here&rsquo;s How You Can Support Hope Community!</h2>
+      <p>Hope Community is a 501(c)(3) organization, and donations are tax deductible&mdash;consult your tax preparer for additional information.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div id="cash" class="large-4 columns">
+      <h3>Make a Cash Donation</h3>
+      <p>Assisting Hope Community through a cash donation is easy&mdash;simply click the link below to reach our secure GoFundMe charitable giving account. Thank you for your support!</p>
+      <div id="gofund"><a target="_blank" style="border:none;" href="http://www.gofundme.com/hopecommunity?utm_medium=wdgt" title="Visit this page now."><img style="border:none;" src="https://funds.gofundme.com/css/3.0_donate/green/widget.png"></a></div>
+    </div>
+    <div id="goods" class="large-4 columns">
+      <h3>Donate Household Goods</h3>
+          
+          <select id="select1" name="select1" onchange="populate(this.id, 'select2')">
+               <option value="">Type of Goods</option>
+               <option value="kitchen">Kitchen</option>
+               <option value="bed">Bedroom</option>
+               <option value="linens">Linens</option>
+               <option value="bath">Bathroom</option>
+               <option value="living">Living Room</option>
+               <option value="personal">Personal Care</option>
+               <option value="household">Household Supplies</option>
+               <option value="baby">Baby Items</option>
+          </select>
+        <div id="select2"></div>
+        
+    </div>
+    <div id="services" class="large-4 columns">
+      <h3>Donate Services</h3>
+    </div>
+  </div><!--end row-->
+
+
+
+  <!-- Footer -->
+<div id="bottom-band">
+   <footer class="row">
+   
+<div class="large-12 columns">
+      
+      </div><!--end large-12-->
+      
+<div class="row">
+       <div id="address" class="large-12 columns">
+          <p>Grand Rapids Housing Commission | 1420&nbsp;Fuller&nbsp;Ave.&nbsp;SE | Grand&nbsp;Rapids,&nbsp;MI&nbsp;49507 | Ph:&nbsp;616.235.2600 | Fax:&nbsp;616.235.2660</p>
+        </div><!--end address-->
+        </div><!--end row-->
+  </footer>
+  </div><!--end bottom-band-->
+  </div>
+
+   <script type="text/javascript" src="js/hope.js"></script>
+</body>
+</html>
