@@ -6,7 +6,7 @@
    <link rel="stylesheet" href="css/app.css" /> 
    <link href='http://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,900' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic' rel='stylesheet' type='text/css'>
-    <script src="scripts/modernizr-1.6.min.js">
+    <script src="js/modernizr.js">
     </script>
 </head>
   <body>
@@ -43,7 +43,8 @@
 
     <div class="leftgradient">
       <h3>Make a Cash Donation</h3>
-      <p>Assisting Hope Community through a cash donation is<br>easy&mdash;simply click the link below to reach our secure GoFundMe charitable giving account.<br>Thank you for your support!</p>
+      <p>Assisting Hope Community through a cash donation is<br>easy&mdash;simply click the link below to reach our secure GoFundMe charitable giving account.</p>
+      <p>Thank you for your support!</p>
       <a target="_blank" style="border:none;" href="http://www.gofundme.com/hopecommunity?utm_medium=wdgt" title="Visit this page now."><img style="border:none;" src="https://funds.gofundme.com/css/3.0_donate/green/widget.png"></a>
     </div>
     <div class="extendright">
@@ -51,7 +52,7 @@
     </div>
     <div class="rightcol">
       
-      <form>
+     <form autocomplete="off" method="post" action="http://morpheus.dce.harvard.edu/cgi-bin/echo.cgi" name="hw4Form"><br>
     <div class="category">
     <h5>Kitchen Items</h5>
       <input id="table" type="checkbox"><label for="table">Table/chairs</label><br>
@@ -143,12 +144,21 @@
     </div> <!--end secChecks-->
   <div class="pushright">
       <h3>Select the Type of Service You Can Donate</h3>
+      <div id="sel1"><select name="primaryMenu" id="primaryMenu">
+                <option>Choose Service</option>
+                <option value="pro" id="pro">Professional Services</option>
+                <option value="res" id="res">Resident Services</option>
+                <option value="maint" id="maint">Maintenance Services</option>
+            </select></div>    
+            <div id="sel2"><select name="servMenu" id="servMenu"></select></div>   
     </div>
 
       </form>
     
 
-    <div class="rightcol">
+    <div class="pushright">
+    <fieldset>
+    </fieldset>
     </div>
   
   <!-- Footer -->
