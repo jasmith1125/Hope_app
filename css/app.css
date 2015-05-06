@@ -6,7 +6,7 @@ html {
   background-color: transparent;
   z-index: 1;
 }
-article, body, dd, div, dl, dt, figcaption, figure, footer, h1, h2, h3, h4, h5, li, nav, ol, p, section, table, th, td, ul, img, form, fieldset, legend {
+article, body, dd, div, dl, dt, figcaption, figure, form, footer, h1, h2, h3, h4, h5, li, nav, ol, p, section, table, th, td, ul, img, form, fieldset, legend {
   margin: 0;
   padding: 0;
   }
@@ -18,7 +18,7 @@ p {
   }
 body {
   margin: 0;
-  padding: 0px;
+  padding: 0px 20px;
   font-family: 'OpenSansRegular', Tahoma, Arial, sans-serif;
   font-size: .9em;
   }
@@ -197,7 +197,7 @@ td {
   line-height: 1.25em;
   color: black;
   background: white;
-  padding: 0 15px 0 15px;
+  padding: 0;
   overflow: hidden;
   -webkit-box-shadow-left: 6px 0 6px  -6px #394042 , -6px 0 6px  -6px #394042;
   -moz-box-shadow-left: 6px 0 6px  #394042 , -6px 0 6px  #394042;
@@ -628,8 +628,8 @@ a:active {
   float: left;
   width: 200px;
   height: auto;
-  margin: 0 20px 20px 0;
-  padding: 0 20px 20px 20px;
+  margin: 0 20px 20px 20px;
+  padding: 0 10px 20px 10px;
   }
 .leftmenu {
   float: left;
@@ -651,12 +651,7 @@ z-index: 5;
  position: relative;
  width: 250px;
  }
-.rightcol {
-  width: 280px;
-  float: left;
-  margin: 0;
-  padding: 0 25px 15px 15px;
-  }
+
 li .smallfont {
 font-family: 'OpenSansRegular', Tahoma, Arial, sans-serif;
   font-weight: normal;
@@ -782,9 +777,9 @@ z-index: 5;
 .twocolleft {
   float: left;
   clear: right;
-  width: 435px;
+  width: 425px;
   height: auto;
-  margin: 10px 5px 0 0;
+  margin: 10px 5px 0 20px;
   padding: 0px 20px 0 10px;
 
   }
@@ -883,9 +878,9 @@ z-index: 5;
   }
 .twocolright {
   float: left;
-  width: 435px;
+  width: 425px;
   height: auto;
-  margin: 10px 5px 0 10px;
+  margin: 10px 15px 0 10px;
   padding: 0px 20px 0 10px;
   }
 .seniordev {
@@ -1046,9 +1041,17 @@ font-family: 'OpenSans', tahoma, arial, sans-serif;
    }
 .category {
   padding-bottom: 1em;
+  padding-top: 0;
 }
+.rightcol {
+  width: 280px;
+  float: left;
+  margin-top: -5px;
+  padding: 0 25px 15px 15px;
+  }
 #secChecks {
   float: left;
+  padding-top: 1em;
   width: 280px;
 }
 .extendright {
@@ -1063,4 +1066,91 @@ font-family: 'OpenSans', tahoma, arial, sans-serif;
 }
 #sel1 {
   float: left;
+  margin-bottom: 2em;
+}
+#submit-button:active {
+  position:relative;
+  top:1px;
+}
+#contact-form { 
+    width:600px;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    padding:20px;    
+    border: 6px solid #BA8E3A;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    
+}
+#contact-form h1 {
+  font-size: 1.2em;
+  text-align: left;
+  margin-top: 0;
+}
+
+#contact-form input, 
+#contact-form select, 
+#contact-form textarea, 
+#contact-form label {
+    margin-bottom:2px;
+}
+ 
+#contact-form input {
+  width: 260px;
+  height: 1.5em;
+  margin: 0 1.5em 1em 0;
+  position: relative;
+} 
+ 
+#contact-form textarea {
+    width:580px;
+    border: 1px solid #BA8E3A;
+    margin-bottom:20px;
+    padding:4px;
+}
+ 
+#contact-form input:focus, 
+#contact-form select:focus, 
+#contact-form textarea:focus {
+    background-color: #FAF6EF;
+}
+ 
+#contact-form label {
+    display:block;
+    font-size: .9em;
+}
+ 
+#contact-form .required {
+    font-weight:bold;
+    color:#F00;    
+}
+ 
+#contact-form #submitBtn {
+    width: 120px;
+    font-size: 1em;
+    background-color:#BA8E3A;
+    color:#FFF;
+    border:none;
+    display:block;
+    float:right;
+    margin-bottom:0px;
+    margin-right:2em;
+    
+    -moz-border-radius:8px;
+}
+ 
+#contact-form #submitBtn:hover {
+    background-color: #A6CFDD;
+}
+ 
+.first {
+   float: left;
+}
+.second {
+  display: block;
+   float: left;
+}
+.formText {
+  font-size: .8em;
 }

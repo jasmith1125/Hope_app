@@ -1,5 +1,16 @@
 /* hope.js */
-window.onload = function() {
+$(document).ready(function () {
+	function init() {
+	var input_name = '';
+		init() {
+		$.each( $(‘form input’), function() {
+		input_name = $(this).attr(‘name’);
+		if (localStorage[input_name]) {
+		$(this).val(localStorage[input_name]);
+	}
+}
+});
+
 'use strict';
 
 
@@ -88,9 +99,92 @@ function createServMenu () {
 // is made in the primary menu
 document.getElementById("primaryMenu").onchange = createServMenu;
 
-// End select box exercise
+// End select box
+
+// Gather form data and put in local storage
+// Create an array to hold all of the square objects
+var data = [];
+
+// Create a constructor function that enables creation of Datum object
+var Datum = function(firstname, lastname, email, phone) {
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.email = email;
+    this.phone = phone;
+}
+
+// Create a function that writes Datum to html page
+function writeToPage(someData) {
+	var myOutput = document.getElementById("output");
+	var div = document.getElementById('donations');
+
+		var firstnameNode = document.createTextNode(someData.firstname);
+		var span = document.createElement("span"); // create a new span tag
+		span.appendChild(firstnameNode); // add the text node to the span
+		div.appendChild(span);
+
+		var lastnameNode = document.createTextNode(someData.lastname);
+		var span = document.createElement("span");
+		span.appendChild(lastnameNode);
+		div.appendChild(span);
+
+		var email = document.createTextNode(someData.email);
+		var span = document.createElement("span"); // create a new span tag
+		span.appendChild(emailNode); // add the text node to the span
+		div.appendChild(span);
+
+
+		var phoneNode = document.createTextNode(someData.phone);
+		var span = document.createElement("span"); // create a new span tag
+		span.appendChild(phoneNode);
+		div.appendChild(span);
+
+		// Add form entries to "output" div
+		myOutput.appendChild(div);
+}
+
+// Create function to gather form input, write to page, add event to array, convert to JSON, add to local storage
+function submitData() {
+	// Get values
+	var firstname = document.getElementById("firstname").value;
+	var lastname = document.getElementById("lastname").value;
+	var email = document.getElementById("email").value;
+	var phone = document.getElementById("phone").value;
+
+	// Write the data object to the page
+	var myData = new Datum(firstname, lastname, email, phone);
+	writeToPage(myData);
+
+	// Add event to an array of events
+	data.push(myData);
+
+	// Write the array to local storage
+	var jsonString = JSON.stringify(data);
+
+	localStorage.setItem("dataStorage", jsonString);
+
+}
+
+window.onload = function() {
+	// Assign an onclick handler to the "save" button
+	document.getElementById("submitBtn").onclick = submitData;
+
+	// Get all data from local storage and store in the global array
+	var jsonString = localStorage.getItem("dataStorage");
+	if (jsonString) {
+		events = JSON.parse(jsonString);
+	}
+
+	 // Write the event objects to the page
+	 for (var i = 0; i < data.length; i++) {
+	 	writeToPage(data[i]);
+	 }
+}
+
+ // Clear form field inputs after submit; from WC3: http://www.w3schools.com/jsref/met_form_reset.asp
+	document.getElementById("contact").reset();
 
 
 
 
-} // end window.onload
+} // end (document).ready
