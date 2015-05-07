@@ -66,7 +66,7 @@ function submitEvent() {
 	var pots = document.getElementById("pots").value;
 	var mic = document.getElementById("mic").value;
 	
-
+    if ($('input[type="checkbox"]:checked')) {
 	// Write the event object to teh page
 	var myEvent = new Event(table, dishes, pots, mic);
 	writeToPage(myEvent);
@@ -78,7 +78,7 @@ function submitEvent() {
 	var jsonString = JSON.stringify(events);
 
 	localStorage.setItem("eventStorage", jsonString);
-
+}
 }
 
 window.onload = function() {

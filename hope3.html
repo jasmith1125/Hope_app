@@ -56,20 +56,34 @@
     </div>
     <div class="rightcol">
       
-    <form autocomplete="off" method="get" action="#">
+    <form id="contact" autocomplete="off"><br><br>
     <div class="category">
-    <h5>Kitchen Items</h5>
-      <input id="table" name="table" value="Kitchen&nbsp;table/chairs" type="checkbox" /><label for="table">Table/chairs</label><br>
-      <input id="dishes" name="dishes" value="Dishes" type="checkbox" /><label for="dishes">Dishes</label><br>
-      <input id="pots" name="pots" value="Pots and pans" type="checkbox" /><label for="pots">Pots &amp; Pans</label><br>
-      <input id="mic" name="mic" value="Microwave oven" type="checkbox" /><label for="mic">Microwave Oven</label><br>
-      <input id="bowls" name="bowls" value="Mixing bowls/bakeware" type="checkbox" /><label for="bowls">Mixing Bowls/Bakeware</label><br>
-      <input id="cloths" name="cloths" value="Dish cloths and towels" type="checkbox" /><label for="cloths">Dish cloths &amp; towels</label><br>
-      <input id="knives" name="knives" value="Kitchen Knives" type="checkbox" /><label for="knives">Kitchen knives</label><br>
-      <input id="wash" name="wash" value="Dish Soap, Dish Drainers" type="checkbox" /><label for="wash">Dish soap, dish drainers</label><br>
-      <input id="foil" name="foil" value="dishes" type="checkbox"><label for="foil" />Foil, food storage bags</label><br>
-      <input id="flat" name="flat" value="dishes" type="checkbox"><label for="flat" />Flatware</label><br>
-    </div>
+       <dl class="dropdown">
+          <dt>
+            <a href="#"><span class="hida">Select Kitchen Items</span>
+            <p class="multiSel"></p>
+            </a>
+          </dt>
+
+          <dd>
+              <div class="multiSelect">
+                <ul>
+                  <li><input id="table" name="table" value="Kitchen&nbsp;table/chairs" type="checkbox"/>Table/chairs</li>
+                  <li><input id="dishes" name="dishes" value="Dishes" type="checkbox" />Dishes</li>
+                  <li><input id="pots" name="pots" value="Pots and pans" type="checkbox" />Pots and pans</li>
+                  <li><input id="mic" name="mic" value="Microwave oven" type="checkbox" />Microwave Oven</li>
+                  <li><input id="bowls" name="bowls" value="Mixing bowls/bakeware" type="checkbox" />Mixing Bowls/Bakeware</li>
+                  <li><input id="cloths" name="cloths" value="Dish cloths and towels" type="checkbox" />Dish cloths &amp; towels</li>
+                  <li><input id="knives" name="knives" value="Kitchen Knives" type="checkbox">Kitchen knives</li>
+                  <li><input id="wash" name="wash" value="Dish Soap, Dish Drainers" type="checkbox">Dish soap, dish drainers</li>
+                  <li><input id="foil" name="foil" value="Foil, plastic wrap, food storage bags" type="checkbox">Foil, food storage bags</li>
+                  <li><input id="flat" name="flat" value="dishes" type="checkbox">Flatware</li>
+                </ul>
+              </div>
+            </dd>
+          </dl>
+        </div>
+   
 
      <div class="category">
     <h5>Living Room Items</h5>
@@ -164,11 +178,11 @@
     <p class="formText">Please check the item(s) you wish to donate, fill in the contact information below and submit this form to complete your donation. Our staff will be in touch to arrange delivery of your item donation, make arrangements for your service donation, or answer any questions you may have. Your support is greatly appreciated!</p>
       <div class="first">
         <label for="firstname">First Name: <span class="required">*</span></label>
-        <input type="text" id="firstname" name="firstname" placeholder="first name"  autofocus="autofocus" /><br>
+        <input type="text" id="firstname" name="firstname" placeholder="first name" required="required" autofocus="autofocus" /><br>
          </div>
          <div class="second">
         <label for="lastname">Last Name: <span class="required">*</span></label>
-        <input type="text" id="lastname" name="lastname" placeholder="last name" /><br>
+        <input type="text" id="lastname" name="lastname" placeholder="last name" required="required" /><br>
       </div>
         <div class="first">
         <label for="email">Email Address:</label>
@@ -199,7 +213,7 @@
   
   </div> <!--end wrapper-->
 
-    <script type="text/javascript" src="js/final.js"></script>
+    <script type="text/javascript" src="js/unit2b.js"></script>
    
 </body>
 </html>

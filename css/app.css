@@ -1046,7 +1046,6 @@ font-family: 'OpenSans', tahoma, arial, sans-serif;
 .rightcol {
   width: 280px;
   float: left;
-  margin-top: -5px;
   padding: 0 25px 15px 15px;
   }
 #secChecks {
@@ -1166,4 +1165,7 @@ span {
 li  {
   list-style-type: none;
   padding-left: 2em;
+}
+.show_hide {
+    display:none;
 }
