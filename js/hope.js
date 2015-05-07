@@ -1,15 +1,6 @@
 /* hope.js */
-$(document).ready(function () {
-	function init() {
-	var input_name = '';
-		init() {
-		$.each( $(‘form input’), function() {
-		input_name = $(this).attr(‘name’);
-		if (localStorage[input_name]) {
-		$(this).val(localStorage[input_name]);
-	}
-}
-});
+window.onload = function(){
+	
 
 'use strict';
 
@@ -115,8 +106,8 @@ var Datum = function(firstname, lastname, email, phone) {
 
 // Create a function that writes Datum to html page
 function writeToPage(someData) {
-	var myOutput = document.getElementById("output");
-	var div = document.getElementById('donations');
+	var myOutput = document.getElementById("donations");
+	var div = document.createElement('div');
 
 		var firstnameNode = document.createTextNode(someData.firstname);
 		var span = document.createElement("span"); // create a new span tag
@@ -172,7 +163,7 @@ window.onload = function() {
 	// Get all data from local storage and store in the global array
 	var jsonString = localStorage.getItem("dataStorage");
 	if (jsonString) {
-		events = JSON.parse(jsonString);
+		data = JSON.parse(jsonString);
 	}
 
 	 // Write the event objects to the page
@@ -182,7 +173,8 @@ window.onload = function() {
 }
 
  // Clear form field inputs after submit; from WC3: http://www.w3schools.com/jsref/met_form_reset.asp
-	document.getElementById("contact").reset();
+	//document.getElementById("contact").reset();
+
 
 
 

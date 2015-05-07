@@ -6,6 +6,7 @@
    <link rel="stylesheet" href="css/app.css" /> 
    <link href='http://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,900' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic' rel='stylesheet' type='text/css'>
+   <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
     <script src="js/modernizr.js">
     </script>
 </head>
@@ -46,27 +47,28 @@
       <p>Assisting Hope Community through a cash donation is<br>easy&mdash;simply click the link below to reach our secure GoFundMe charitable giving account.</p>
       <p>Thank you for your support!</p>
       <a target="_blank" style="border:none;" href="http://www.gofundme.com/hopecommunity?utm_medium=wdgt" title="Visit this page now."><img style="border:none;" src="https://funds.gofundme.com/css/3.0_donate/green/widget.png"></a>
-    </div>
+   
     <div id="donations">
     </div>
+     </div>
     <div class="extendright">
       <h3>Donate Goods &amp; Services&mdash;Please check items you can donate, complete contact details and submit</h3>
     </div>
     <div class="rightcol">
       
-     <form id="contact" autocomplete="off" method="post" action="http://morpheus.dce.harvard.edu/cgi-bin/echo.cgi" name="hw4Form"><br>
+    <form id="contact" autocomplete="off"><br><br>
     <div class="category">
     <h5>Kitchen Items</h5>
-      <input id="table" name="table" type="checkbox"><label for="table">Table/chairs</label><br>
-      <input id="dishes" name="dishes" type="checkbox"><label for="dishes">Dishes</label><br>
-      <input id="pots" name="pots" type="checkbox"><label for="pots">Pots &amp; Pans</label><br>
-      <input id="mic" name="mic" type="checkbox"><label for="mic">Microwave Oven</label><br>
-      <input id="bowls" name="bowls" type="checkbox"><label for="bowls">Mixing Bowls/Bakeware</label><br>
-      <input id="cloths" name="cloths" type="checkbox"><label for="cloths">Dish cloths &amp; towels</label><br>
-      <input id="knives" name="knives" type="checkbox"><label for="knives">Kitchen knives</label><br>
-      <input id="wash" name="wash" type="checkbox"><label for="wash">Dish soap, dish drainers</label><br>
-      <input id="foil" name="foil" type="checkbox"><label for="foil">Foil, food storage bags</label><br>
-      <input id="flat" name="flat" type="checkbox"><label for="flat">Flatware</label><br>
+      <input id="table" name="table" value="Kitchen&nbsp;table/chairs" type="checkbox"><label for="table">Table/chairs</label><br>
+      <input id="dishes" name="dishes" value="Dishes" type="checkbox"><label for="dishes">Dishes</label><br>
+      <input id="pots" name="pots" value="Pots and pans" type="checkbox"><label for="pots">Pots &amp; Pans</label><br>
+      <input id="mic" name="mic" value="Microwave oven" type="checkbox"><label for="mic">Microwave Oven</label><br>
+      <input id="bowls" name="bowls" value="Mixing bowls/bakeware" type="checkbox"><label for="bowls">Mixing Bowls/Bakeware</label><br>
+      <input id="cloths" name="cloths" value="Dish cloths and towels" type="checkbox"><label for="cloths">Dish cloths &amp; towels</label><br>
+      <input id="knives" name="knives" value="Kitchen Knives" type="checkbox"><label for="knives">Kitchen knives</label><br>
+      <input id="wash" name="wash" value="Dish Soap, Dish Drainers" type="checkbox"><label for="wash">Dish soap, dish drainers</label><br>
+      <input id="foil" name="foil" value="dishes" type="checkbox"><label for="foil">Foil, food storage bags</label><br>
+      <input id="flat" name="flat" value="dishes" type="checkbox"><label for="flat">Flatware</label><br>
     </div>
 
      <div class="category">
@@ -162,19 +164,19 @@
     <p class="formText">Please check the item(s) you wish to donate, fill in the contact information below and submit this form to complete your donation. Our staff will be in touch to arrange delivery of your item donation, make arrangements for your service donation, or answer any questions you may have. Your support is greatly appreciated!</p>
       <div class="first">
         <label for="firstname">First Name: <span class="required">*</span></label>
-        <input type="text" id="firstname" name="firstname" value="" placeholder="first name" required="required" autofocus="autofocus" /><br>
+        <input type="text" id="firstname" name="firstname" placeholder="first name" required="required" autofocus="autofocus" /><br>
          </div>
          <div class="second">
         <label for="lastname">Last Name: <span class="required">*</span></label>
-        <input type="text" id="lastname" name="lastname" value="" placeholder="last name" required="required" /><br>
+        <input type="text" id="lastname" name="lastname" placeholder="last name" required="required" /><br>
       </div>
         <div class="first">
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" value="" placeholder="username@example.com" /><br>
+        <input type="email" id="email" name="email" placeholder="username@example.com" /><br>
          </div>
          <div class="second">
         <label for="phone">Phone: </label>
-        <input type="tel" id="phone" name="phone" value="" /><br>
+        <input type="tel" id="phone" name="phone" /><br>
          </div>
          <label for="comment">Comment or Question: </label>
          <textarea wrap="soft" rows="3" cols="140"  name="comment" id="comment"></textarea>
@@ -184,7 +186,8 @@
     </form>
 </div>
     
-  
+ 
+    
   <!-- Footer -->
 <div id="footer">
   <footer>
@@ -196,6 +199,7 @@
   
   </div> <!--end wrapper-->
 
-   <script type="text/javascript" src="js/hope.js"></script>
+    <script type="text/javascript" src="js/unit2b.js"></script>
+   
 </body>
 </html>
