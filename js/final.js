@@ -78,10 +78,11 @@ $("#submitBtn").click(function(event){
     
     });
   });*/
+// function that writes item input to html page
 
 $(document).ready(function() {
-    $('#submitBtn').click(function() {
-        event.preventDefault();
+    $('#donateForm').click(function() {
+        
         // get the checked checkboxes
         var result = $('input[type="checkbox"]:checked');
         // make a place to put the array
@@ -92,13 +93,92 @@ $(document).ready(function() {
         }  //end for
             result.each(function() {
                  resultArray += $(this).val() + "<br>";
+               $('#donations').html(resultArray);  
+            }); //end each 
                
-            }); //end each
-            
-            $('#donations').html(resultArray);       
     }); //end click
+
+});
+/*
+// local storage plugin code adapted from :http://elikirk.com/store-form-data-with-html5-localstorage-and-jquery/
+// commented extensively to illustrate that I understand what is happening/why code is included
+(function ( $ ) {
+    $.fn.FormCache = function( options ) {
+        // .extend() gives flexibility to pass in parameters
+        var settings = $.extend({
+        }, options );
+        // when input item is changed (event.target), the function runs
+        function on_change(event) {
+            // get form element that has changed
+            var input = $(event.target);
+            // get parent form and find the name of the changed element
+            var key = input.parents('form').attr('name');
+            // enables recovery of JSON data from local storage
+            var data = JSON.parse(localStorage[key]);
+
+            // check to see whether checkbox element is checked
+            if(input.attr('type') == 'checkbox') {
+                data[input.attr('name')] = input.is(':checked');
+            }else {
+                data[input.attr('name')] = input.val();
+            }
+            // convert data to string and update localStorage object
+            localStorage[key] = JSON.stringify(data);
+        }
+        // function to get data out of local storage
+        // returning function maintains chainability
+         return this.each(function() {  
+            // set variable to current element  
+            var element = $(this);
+            // check whether browser supports localStorage 
+            if(typeof(Storage)!=="undefined"){
+                // create key variable that will be used to store data (key/value pair)
+                var key = element.attr('name');
+                
+                // if localStorage already contains a value for key, parse the current value
+                // to make it accessible to the HTML page
+                var data = false;
+                if(localStorage[key]) {
+                    data = JSON.parse(localStorage[key]);
+                }
+                // if there is no value currently set for key, process data using stringify
+                // so that it can be added to localStorage
+                if(!data) {
+                    localStorage[key] = JSON.stringify({});
+                    
+                    // make data accessible to the html page
+                    data = JSON.parse(localStorage[key]);
+                }
+                element.find('input, select').change(on_change);
+                 element.find('input, select').each(function(){
+                    if($(this).attr('type') != 'submit') {
+                        var input = $(this);
+                        var value = data[input.attr('name')];
+                        if(input.attr('type') == 'checkbox') {
+                            if(value) {
+                                input.attr('checked', input.is(':checked'));
+                            } else {
+                                // make sure checkbox is not checked by default
+                                input.removeAttr('checked');
+                            }
+                        } else {
+                            // get value of input items that aren't checkbox
+                            input.val(value);
+                        }
+                    }
+                });
+                
+                
+            }
+            else {
+                alert('local storage is not available');
+            }
+        });
+    };     
+}( jQuery ))
+
+$(document).ready(function(){
+    $('form').FormCache();
 });
 
-
-// local storage code from :http://elikirk.com/store-form-data-with-html5-localstorage-and-jquery/
-
+*/

@@ -1071,7 +1071,7 @@ font-family: 'OpenSans', tahoma, arial, sans-serif;
   position:relative;
   top:1px;
 }
-#contact-form { 
+#contact { 
     width:600px;
     margin-right: 2em;
     margin-bottom: 2em;
@@ -1082,50 +1082,50 @@ font-family: 'OpenSans', tahoma, arial, sans-serif;
     border-radius:15px;
     
 }
-#contact-form h1 {
+#contact h1 {
   font-size: 1.2em;
   text-align: left;
   margin-top: 0;
 }
 
-#contact-form input, 
-#contact-form select, 
-#contact-form textarea, 
-#contact-form label {
+#contact input, 
+#contact select, 
+#contact textarea, 
+#contact label {
     margin-bottom:2px;
 }
  
-#contact-form input {
+#contact input {
   width: 260px;
   height: 1.5em;
   margin: 0 1.5em 1em 0;
   position: relative;
 } 
  
-#contact-form textarea {
+#contact textarea {
     width:580px;
     border: 1px solid #BA8E3A;
     margin-bottom:20px;
     padding:4px;
 }
  
-#contact-form input:focus, 
-#contact-form select:focus, 
-#contact-form textarea:focus {
+#contact input:focus, 
+#contact select:focus, 
+#contact textarea:focus {
     background-color: #FAF6EF;
 }
  
-#contact-form label {
+#contact label {
     display:block;
     font-size: .9em;
 }
  
-#contact-form .required {
+#contact .required {
     font-weight:bold;
     color:#F00;    
 }
  
-#contact-form #submitBtn {
+#contact #submitBtn {
     width: 120px;
     font-size: 1em;
     background-color:#BA8E3A;
@@ -1139,7 +1139,7 @@ font-family: 'OpenSans', tahoma, arial, sans-serif;
     -moz-border-radius:8px;
 }
  
-#contact-form #submitBtn:hover {
+#contact #submitBtn:hover {
     background-color: #A6CFDD;
 }
  
@@ -1150,7 +1150,7 @@ font-family: 'OpenSans', tahoma, arial, sans-serif;
   display: block;
    float: left;
 }
-.formText {
+.fText {
   font-size: .8em;
 }
 span {
