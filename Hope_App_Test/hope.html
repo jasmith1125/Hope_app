@@ -6,8 +6,6 @@
    <link rel="stylesheet" href="css/app.css" /> 
    <link href='http://fonts.googleapis.com/css?family=Alegreya:400,400italic,700,900' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic' rel='stylesheet' type='text/css'>
-   
-    <script src="js/modernizr.js">
     </script>
 </head>
   <body class="page">
@@ -20,15 +18,7 @@
         <div>
             <h1>Hope Community Rapid Re&#8209;Housing Program</h1>
         </div>  
- <form action="#" id="theForm" name="firstForm">
-        <h4>Lookup happens <code>onchange</code></h4>
-        Enter a Zip or Postal Code (worldwide)<br>
-        <input placeholder="Postal Code" name="zip" id="zip" type="text"><br>
-
-        Lat: <input size="20" placeholder="Lat" name="lat" id="lat" type="text"><br>
-        Lon: <input size="20" placeholder="Lon" name="lon" id="lon" type="text">
-
-
+ 
        </form>
        <code><div id="output"></div></code>
      <div class="twocolleft">
@@ -61,8 +51,7 @@
     <div id="donTitle"></div>
     </div>
 
-    <div id="output">
-    </div>
+  
      </div>
     <div id="anch" class="extendright">
       <h3>Donate Goods &amp; Services&mdash;Click any "Items" category to view lists of needs from the <br>Hope&nbsp;Community &ldquo;wish list&rdquo;</h3>
@@ -225,17 +214,18 @@
                 <label for="address">Address</label>
                 <input size="30" placeholder="address" id="address" type="text" name="address">
             </div>
+            
             <div>
                 <label for="city">City</label>
-                <input size="30" placeholder="City" id="city" type="text" name="city">
+                <input size="30" type="text" name="city" id="city" placeholder="" />
             </div>
             <div>
                 <label for="state">State</label>
-                <input size="10" placeholder="State" id="state" type="text" name="state">
+                <input size="10" type="text" name="state" id="state" placeholder="" />
             </div>
             <div>
                 <label for="zip">Zip Code</label>
-                <input size="20" placeholder="Zip Code" id="zip" type="text" name="zip">
+                <input type="text" class='' pattern="[0-9]*" name="zip" id="zip" placeholder="Type your ZIP code"/>
             </div>
          <div>
          <label for="comment">Comment or Question: </label>
@@ -260,10 +250,12 @@
    </div><!--endfooter-->
   </div> <!--end wrapper-->
   <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+  <script type="text/javascript" src="js/zip.js"></script>
    <script type="text/javascript" src="js/validate.js"></script>
+   <script type="text/javascript" src="js/formCache.js"></script>
   
  
-<script type="text/javascript" src="js/formCache.js"></script>
+
    
    
 </body>

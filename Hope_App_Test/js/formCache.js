@@ -1,38 +1,20 @@
-window.onload = function(){
+$(document).ready(function () {
+ 
+  $('#zip').keyup(function(e) {
+        var zip = $(this).val();
 
-    var address = document.getElementById("address");
-        var city = document.getElementById("city");
-        var state = document.getElementById("state");
-        var zip = document.getElementById("zip");
+        // check that zip code is at least 5 characters and numeric
+        if (zip.length === 5 && $.isNumeric(zip)) {
 
-        zip.addEventListener("change", getGeo);
+        var requestURL = 'http://ziptasticapi.com/' + zip + '?callback=?';
+        $.getJSON(requestURL, null, function(data) {
+            console.log(data);
 
-        function getGeo(e){
-
-            // make an send an XmlHttpRequest
-            var x = new XMLHttpRequest();
-            x.open("GET","http://maps.googleapis.com/maps/api/geocode/json?address="+this.value,true);
-            x.send();
-
-            // set up a listener for the response
-            x.onreadystatechange=function(){
-                if (this.readyState==4 && this.status==200){
-                    //alert(this.response);
-                    var o = this.response;
-                    document.getElementById("output").innerHTML = o;
-                    var l = JSON.parse(this.response).results[0].geometry.location;
-                    if (l.lat) {
-                        lat.value = l.lat;
-                    }
-                    if (l.lng) {
-                        lon.value = l.lng;
-                    }
-
-                }
-            }
-
-
+            if (data.city) $('#city').val(data.city);
+            if (data.state) $('#state').val(data.state);
+        });
         }
+    });
 
  
  var resetForm = function() {
@@ -210,15 +192,15 @@ document.getElementById("primaryMenu").onchange = createServMenu;
 
         }
 
-
+        
 
     } */
 
 
 
-        
+    
 
-  
+    
 
 
-} //end window.onload
+}); //end window.onload

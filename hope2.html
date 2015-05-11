@@ -20,7 +20,17 @@
         <div>
             <h1>Hope Community Rapid Re&#8209;Housing Program</h1>
         </div>  
+ <form action="#" id="theForm" name="firstForm">
+        <h4>Lookup happens <code>onchange</code></h4>
+        Enter a Zip or Postal Code (worldwide)<br>
+        <input placeholder="Postal Code" name="zip" id="zip" type="text"><br>
 
+        Lat: <input size="20" placeholder="Lat" name="lat" id="lat" type="text"><br>
+        Lon: <input size="20" placeholder="Lon" name="lon" id="lon" type="text">
+
+
+       </form>
+       <code><div id="output"></div></code>
      <div class="twocolleft">
     <p>Located in Grand&nbsp;Rapids, Michigan, Hope&nbsp;Community is dedicated to meeting the transitional housing needs of low-income women and their minor dependent children. Applicants are referred by The Salvation Army.</p>
   <p>Our facilities include a Service Center that features twelve private apartments as well as twelve duplex units. As residents gain the skills they need to progress toward independent living, they receive a Section&nbsp;8 Housing Choice Voucher that empowers them to find private rental housing in our community.</p>
@@ -49,6 +59,9 @@
       </div>
     <div id="donations">
     <div id="donTitle"></div>
+    </div>
+
+    <div id="output">
     </div>
      </div>
     <div id="anch" class="extendright">
@@ -213,6 +226,10 @@
                 <input size="30" placeholder="address" id="address" type="text" name="address">
             </div>
             <div>
+                <label for="zip">Zip Code</label>
+                <input size="20" placeholder="Zip Code" id="zip" type="text" name="zip">
+            </div>
+            <div>
                 <label for="city">City</label>
                 <input size="30" placeholder="City" id="city" type="text" name="city">
             </div>
@@ -220,10 +237,7 @@
                 <label for="state">State</label>
                 <input size="10" placeholder="State" id="state" type="text" name="state">
             </div>
-            <div>
-                <label for="zip">Zip Code</label>
-                <input size="20" placeholder="Zip Code" id="zip" type="text" name="zip">
-            </div>
+            
          <div>
          <label for="comment">Comment or Question: </label>
          <textarea wrap="soft" rows="3" cols="140"  id="comment" name="comment" ></textarea><br>
