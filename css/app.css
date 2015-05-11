@@ -46,10 +46,9 @@ h2 {
   }
 h3 {
   text-align: leftht;
-  padding: 0;
+  margin: 0;
   font-family: 'Alegreya', georgia, "Times New Roman", serif;
-   font-size: 1.1em;
-   margin: 0 0 10px 0;
+   font-size: 1.25em;
   }
 h4 {
   text-align: left;
@@ -86,7 +85,7 @@ h7 {
   font-style: normal;
   font-size: 1em;
   padding: 0 100px;
-  text-align: left;
+  text-align: center;
   }
 ul ul li {
   list-style-type: circle;
@@ -626,7 +625,7 @@ a:active {
   }
 .leftgradient {
   float: left;
-  width: 200px;
+  width: 280px;
   height: auto;
   margin: 0 20px 20px 20px;
   padding: 0 10px 20px 10px;
@@ -777,10 +776,11 @@ z-index: 5;
 .twocolleft {
   float: left;
   clear: right;
+  font-size: .8em;
   width: 425px;
   height: auto;
   margin: 10px 5px 0 20px;
-  padding: 0px 20px 0 10px;
+  padding: 0px 20px 10px 10px;
 
   }
 .twocolleft ul {
@@ -878,10 +878,11 @@ z-index: 5;
   }
 .twocolright {
   float: left;
+  font-size: .8em;
   width: 425px;
   height: auto;
   margin: 10px 15px 0 10px;
-  padding: 0px 20px 0 10px;
+  padding: 0px 20px 10px 10px;
   }
 .seniordev {
   float: left;
@@ -982,6 +983,7 @@ IMG.displayed {
 #firstp {
 padding: 0px 1em 1em 310px;
  }
+
 .indented li {
   list-style-type: circle;
   }
@@ -1044,23 +1046,24 @@ font-family: 'OpenSans', tahoma, arial, sans-serif;
   padding-top: 0;
 }
 .rightcol {
-  width: 280px;
+  width: 240px;
   float: left;
-  padding: 0 25px 15px 15px;
+  padding: .5em 25px 15px 15px;
   }
 #secChecks {
   float: left;
-  padding-top: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
   width: 280px;
 }
 .extendright {
   float: left;
-  width: 680px;
+  width: 600px;
   padding-left: 1em;
 }
 .pushright {
   float: right;
-  width: 680px;
+  width: 600px;
   padding-left: 1em;
 }
 #sel1 {
@@ -1072,7 +1075,7 @@ font-family: 'OpenSans', tahoma, arial, sans-serif;
   top:1px;
 }
 #contact { 
-    width:600px;
+    width:520px;
     margin-right: 2em;
     margin-bottom: 2em;
     padding:20px;    
@@ -1096,14 +1099,14 @@ font-family: 'OpenSans', tahoma, arial, sans-serif;
 }
  
 #contact input {
-  width: 260px;
+  width: 230px;
   height: 1.5em;
   margin: 0 1.5em 1em 0;
   position: relative;
 } 
  
 #contact textarea {
-    width:580px;
+    width:480px;
     border: 1px solid #BA8E3A;
     margin-bottom:20px;
     padding:4px;
@@ -1160,6 +1163,8 @@ span {
   float: left;
   display: block;
   padding-top: 1em;
+  font-size: .9em;
+  line-height: 1.5em;
 
 }
 li  {
@@ -1168,4 +1173,30 @@ li  {
 }
 .show_hide {
     display:none;
+}
+#volunteer {
+  font-size: .7em;
+  line-height: 1.3em;
+  float: right;
+  padding-right: 80px;
+  margin-top: -2em;
+  width: 200px;
+}
+.items {
+    display: none;
+}
+.smaller {
+  font-size: .8em;
+  padding-bottom: 1em;
+}
+#donTitle {
+  display: block;
+  font-family: 'Alegreya', georgia, "Times New Roman", serif;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.hint {
+  display:none;
+  color:red;
 }
