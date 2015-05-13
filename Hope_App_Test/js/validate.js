@@ -1,9 +1,9 @@
+$(document).ready(function () {
+
 /* Got help from the following tutorial: http://www.lynda.com/Developer-Databases-tutorials/Validating-Processing-Forms-JavaScript-PHP/120466-2.html?srchtrk=index:1%0Alinktypeid:2%0Aq:javascript%0Apage:1%0As:relevance%0Asa:true%0Aproducttypeid:2 */
-var inputFields = document.donateForm.getElementsByTagName('input');
 
-$( document ).ready(function() {
 
-	// get form elements needed to validate form
+// get form elements needed to validate form
 	document.getElementById('donateForm');	
 	var firstname = document.getElementById('firstname');
 	var fVal = document.getElementById('firstname').value;
@@ -24,19 +24,13 @@ $( document ).ready(function() {
 firstname.onblur = function() {
 	
 	if (fVal === "") { 
+		hint.style.display = "block";
 		hint.innerHTML = "First name is required";
 	}
-}
-// compare input to nameReg, offer hint to direct format of input
-firstname.onchange = function() {
 
-	var isValid = this.value.search(nameReg) >= 0; //check that pattern exists within string
-
-	if (!(isValid)) {
-		hint.innerHTML = "First name must be 2-20 alphabetical characters";
-	}
 	else {
-		hint.innerHTML ='';
+		hint.style.display ="none";
+		//hint.innerHTML ='';
 	}
 	}
 	
@@ -47,6 +41,7 @@ lastname.onblur = function() {
 		hint.innerHTML = "Last name is required";
 	}
 }
+
 // compare input to nameReg, offer hint to direct format of input
 lastname.onchange = function() {
 	var isValid = this.value.search(nameReg) >= 0; //check that pattern exists within string
@@ -57,7 +52,7 @@ lastname.onchange = function() {
 	else {
 		hint.innerHTML ='';
 	}
-	}
+	} 
 
 // validate email
 // the fancy regEx here is from this tutorial: https://www.youtube.com/watch?v=UKiy9H_CD0M

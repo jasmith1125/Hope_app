@@ -249,7 +249,45 @@ h3 {
 #contact #submitBtn:hover {
     background-color: #A6CFDD;
 }
+
+ #contact #resetBtn {
+    width: 120px;
+    font-size: 1em;
+    background-color:#BA8E3A;
+    color:#FFF;
+    border:none;
+    display:block;
+    float:right;
+    margin-bottom:0px;
+    margin-right:2em;
+    padding: 1px;
+    text-align: center;
+    
+    -moz-border-radius:8px;
+}
  
+#contact #resettBtn:hover {
+    background-color: #A6CFDD;
+}
+button {
+    width: 220px;
+    font-size: 1em;
+    background-color:#BA8E3A;
+    color:#FFF;
+    border:none;
+    display:block;
+    float:right;
+    margin-bottom:1em;
+    margin-right:2em;
+    padding: 1px;
+    text-align: center;
+    
+    -moz-border-radius:8px;
+}
+ 
+button:hover {
+    background-color: #A6CFDD;
+}
 .first {
    float: left;
    padding: 0;
@@ -306,6 +344,7 @@ span {
   padding-bottom: 5px;
 }
 .hint {
+  display: none;
   margin-top: -1em;
   color:red;
   font-size: .9em;

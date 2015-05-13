@@ -16,15 +16,15 @@ $(document).ready(function () {
         }
     });
 
- 
-var resetForm = function() {
- 	
-        localStorage.clear();
-    }
-    var reset = document.getElementById('resetBtn');
-    resetBtn.onclick = resetForm;
-/*
 
+var reset = document.getElementById('resetBtn');
+
+reset.onclick = function() {
+ 	document.getElementById("donateForm").reset();
+    
+    }
+
+/*
 (function ( $ ) {
     $.fn.FormCache = function( options ) {
         var settings = $.extend({
