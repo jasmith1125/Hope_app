@@ -23,7 +23,7 @@ var resetForm = function() {
     }
     var reset = document.getElementById('resetBtn');
     resetBtn.onclick = resetForm;
-
+/*
 
 (function ( $ ) {
     $.fn.FormCache = function( options ) {
@@ -90,7 +90,7 @@ $(document).ready(function(){
     $('form').FormCache();
 });
 
-
+*/
 
 // show/hide form checkbox categories
  $(document).ready(function() {

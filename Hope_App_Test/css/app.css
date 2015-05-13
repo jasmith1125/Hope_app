@@ -173,7 +173,7 @@ h3 {
 }
 #contact { 
     width:560px;
-    margin-right: 3em;
+    margin-right: 2em;
     margin-bottom: 2em;
     padding:20px;    
     border: 6px solid #BA8E3A;
@@ -196,7 +196,7 @@ h3 {
 }
  
 #contact input {
-  width: 230px;
+  width: 240px;
   height: 1.5em;
   margin: 0 1.5em 1em 0;
   position: relative;
@@ -261,7 +261,7 @@ h3 {
    margin-bottom: -1em;
 }
 .second {
-  display: block;
+  
    float: left;
    padding: 0;
   margin: 0;
@@ -308,10 +308,17 @@ span {
 .hint {
   margin-top: -1em;
   color:red;
-  font-size: .8em;
+  font-size: .9em;
+}
+#hintDiv {
+  margin-top: 5px;
+  padding-bottom: 5px;
+}
+.show {
+    display: block;
 }
 .hide {
-  display: none;
+    display: none;
 }
 #leftThird {
   float: left;
@@ -333,11 +340,3 @@ span {
 #rightThird input {
   width: 60px;
 }
-#nameHint1.first {
-  float: left;
-  margin-right: 1em;
-}
-#nameHint2.second {
-  float: right;
-}
-
