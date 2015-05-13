@@ -17,12 +17,14 @@ $(document).ready(function () {
     });
 
  
- var resetForm = function() {
+var resetForm = function() {
+ 	
         localStorage.clear();
     }
     var reset = document.getElementById('resetBtn');
     resetBtn.onclick = resetForm;
-/*
+
+
 (function ( $ ) {
     $.fn.FormCache = function( options ) {
         var settings = $.extend({
@@ -79,9 +81,7 @@ $(document).ready(function () {
                 
                 
             }
-            else {
-                alert('local storage is not available');
-            }
+           
         });
     };     
 }( jQuery ))
@@ -90,7 +90,7 @@ $(document).ready(function(){
     $('form').FormCache();
 });
 
-*/
+
 
 // show/hide form checkbox categories
  $(document).ready(function() {
@@ -99,6 +99,7 @@ $(document).ready(function(){
          $('.items').toggle('show');
     });
 });
+
 
 
  function showValues() {
@@ -153,54 +154,6 @@ document.getElementById("primaryMenu").onchange = createServMenu;
 
 // End select box
 
-// Form validation
-
-
-// Ajax
-/* window.onload = function(){
-
-        var city = document.getElementById("city");
-        var state = document.getElementById("state");
-        var zip = document.getElementById("zip");
-
-        zip.addEventListener("change", getGeo);
-
-        function getGeo(e){
-
-            // make an send an XmlHttpRequest
-            var x = new XMLHttpRequest();
-            x.open("GET","http://maps.googleapis.com/maps/api/geocode/json?address="+this.value,true);
-            x.send();
-
-            // set up a listener for the response
-            x.onreadystatechange=function(){
-                if (this.readyState==4 && this.status==200){
-                    //alert(this.response);
-                    var o = this.response;
-                    document.getElementById("output").innerHTML = o;
-                    var l = JSON.parse(this.response).results[0].geometry.address_components[1];
-                    if (l.city) {
-                        city.value = l.long_name;
-                    }
-                    if (l.state) {
-                        state.value = l.long_name;
-                    } 
-
-                }
-            }
-
-
-        }
-
-        
-
-    } */
-
-
-
-    
-
-    
 
 
 }); //end window.onload

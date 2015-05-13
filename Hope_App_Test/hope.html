@@ -40,7 +40,7 @@
        <p class="smaller">Hope Community is a 501(c)(3) organization, and donations are tax deductible&mdash;consult your financial advisor for additional information.</p>
     </div>
 
-    <div class="leftgradient">
+    <div class="cash">
       <h3>Make a Cash Donation</h3>
       <p>Assisting Hope Community through a<br>cash donation is easy&mdash;simply click the link below to reach our secure GoFundMe charitable giving account.</p>
       <p>Thank you for your support!</p>
@@ -188,50 +188,51 @@
     
     <div id="contact" class="pushright">
     
-    <h1>Donor Confirmation</h1>
+    <h1>Donor Confirmation</h1> 
     <p class="fText">Please check the item(s) you wish to donate, fill in the contact information below and submit this form to complete your donation. Our staff will be in touch to arrange delivery of your item donation, make arrangements for your service donation, or answer any questions you may have. Your support is greatly appreciated!</p>
-      <div>
-        <label for="firstname">First Name: <span class="required">*</span></label>
+    <span class="hint" id="hint"></span>
+      <div class="first">
+        <label for="firstname">First Name:</label>
         <input id="firstname" name="firstname" type="text" placeholder="first name"  autofocus="autofocus" required="required" ><br>
          <span class="hint" id="nameHint1" ></span><br>
          </div>
-         <div>
+         <div class="second">
         <label for="lastname">Last Name: <span class="required">*</span></label>
-        <input id="lastname" name="lastname" type="text" placeholder="last name" disabled><br>
+        <input id="lastname" name="lastname" type="text" placeholder="last name"><br>
          <span class="hint" id="nameHint2" ></span><br>
       </div>
-        <div>
-        <label for="email">Email Address:</label>
+        <div class="first">
+        <label for="email">Email Address:<span class="required">*</span></label>
         <input id="email" name="email" type="email" placeholder="username@example.com" ><br>
         <span class="hint" id="emailHint" ></span><br>
          </div>
-         <div>
-        <label for="phone">Phone: </label>
+         <div class="second">
+        <label for="phone">Phone:<span class="required">*</span></label>
         <input id="phone" name="phone" type="tel" ><br>
          <span class="hint" id="phoneHint" ></span><br>
          </div>
-         <div>
+         <div id="address">
                 <label for="address">Address</label>
                 <input size="30" placeholder="address" id="address" type="text" name="address">
             </div>
-            
-            <div>
-                <label for="city">City</label>
-                <input size="30" type="text" name="city" id="city" placeholder="" />
-            </div>
-            <div>
-                <label for="state">State</label>
-                <input size="10" type="text" name="state" id="state" placeholder="" />
-            </div>
-            <div>
+            <div id="leftThird">
                 <label for="zip">Zip Code</label>
                 <input type="text" class='' pattern="[0-9]*" name="zip" id="zip" placeholder="Type your ZIP code"/>
             </div>
+            <div id="midThird">
+                <label for="city">City</label>
+                <input size="30" type="text" name="city" id="city" placeholder="" />
+            </div>
+            <div id="rightThird">
+                <label for="state">State</label>
+                <input size="10" type="text" name="state" id="state" placeholder="" />
+            </div>
+            
          <div>
          <label for="comment">Comment or Question: </label>
          <textarea wrap="soft" rows="3" cols="140"  id="comment" name="comment" ></textarea><br>
-          <span class="error" id="commentHint" ></span><br>
-         <input type="submit" value="Reset Form" id="resetBtn" />
+          <span class="hint" id="commentHint" ></span><br>
+         <input type="reset" value="Reset Form" id="resetBtn" />
         <input type="submit" value="Send Comment" id="submitBtn" />
         </div>
    
@@ -255,8 +256,6 @@
    <script type="text/javascript" src="js/formCache.js"></script>
   
  
-
-   
    
 </body>
 </html>
